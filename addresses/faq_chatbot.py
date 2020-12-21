@@ -12,7 +12,8 @@ d2v_faqs = doc2vec.Doc2Vec.load(os.path.join('./model/d2v_faqs_size200_min5_epoc
 
 # 질문-답변 파일 불러오기
 df2 = pd.read_excel('./data/df2_20200917_edited.xlsx')
-df2.dropna(axis=0)
+df2.dropna(axis=0) # 행기준: 결측치가 존재하면 해당 행 삭제 (행 결과 출력)
+
 
 qna_num = 0  # 질문답변 번호인 qna_num 초기화
 
